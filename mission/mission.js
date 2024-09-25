@@ -8,7 +8,7 @@ if (themeSelector.value === 'dark') {
     logo.src = 'byui-logo_dark.png'
 } else {
     document.body.classList.remove('dark');
-    logo.src = 'byui-logo_blue.webpd'
+    logo.src = 'byui-logo_blue.webp'
 }
 
 }
