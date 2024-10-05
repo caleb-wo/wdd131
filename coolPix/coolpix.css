@@ -1,0 +1,82 @@
+ @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+ :root {
+ --primary-color: #52489c;
+ --secondary-color: #59c3c3;
+ --accent-color: #f45b69;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: Mooli, san-serif;
+ }
+
+ h1 {
+    text-align: center;
+ }
+
+ header {
+    background-color: var(--primary-color); /* Apply background color */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: white; /* Optional: Change text color for better contrast */
+}
+
+button {
+    background: none; /* Remove background color */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    font: inherit; /* Inherit font from parent element */
+    color: inherit; /* Inherit text color from parent element */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header , body , footer {
+    max-width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media  screen and (min-width: 1000px) {
+    button {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+    }
+    li {
+        display: inline;
+        padding: 6em;
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
