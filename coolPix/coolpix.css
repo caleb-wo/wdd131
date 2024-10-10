@@ -25,7 +25,7 @@ button {
     background: none; /* Remove background color */
     border: none; /* Remove border */
     padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    margin-bottom: 1em; /* Remove margin */
     font: inherit; /* Inherit font from parent element */
     color: inherit; /* Inherit text color from parent element */
     cursor: pointer; /* Change cursor to pointer on hover */
@@ -34,6 +34,11 @@ button {
 ul {
     list-style-type: none;
     text-align: center;
+    padding-left: 0%;
+}
+
+li {
+    padding-top: 1em;
 }
 
 header , body , footer {
@@ -55,6 +60,10 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     text-align: center;
+}
+
+.hide {
+    display: none;
 }
 
 @media screen and (min-width: 700px) {
