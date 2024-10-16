@@ -51,6 +51,11 @@ section div {
     align-self: center;
 }
 
+img {
+    max-width: 650px;
+    max-height: 800px;
+}
+
 span {
     color: #e8317e;
 }
