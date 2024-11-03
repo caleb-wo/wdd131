@@ -1,3 +1,4 @@
+
 const articles = [
 	{
 		id: 1,
@@ -25,3 +26,27 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	}
 ]
+
+const expansion = document.getElementById('PrimaryInsert');
+const articleInsert = () => {
+	const article = articles[0]
+	expansion.innerHTML = `
+<!-- Dates -->
+            <div id="dates">
+                <p>${article.date}</p>
+                <p>${article.ages}</p>
+                <p>${article.genre}</p>
+                <p>${article.stars}</p>
+            </div>
+<!-- Center Presentation -->
+            <section>
+                <h1>${article.title}</h1>
+                <div id="imageBox">
+                    <img src="${article.imgSrc}" alt="${article.imgAlt}">
+                </div>
+                <p>${article.description}<span>Read More...</span></p>
+            </section>
+	`;
+}
+
+articleInsert()
