@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Caleb Wolfe">
+	<meta name="description" content="A website that used JavaScript, HTML, and CSS to display and advertize recipes.">
+        <title>Recipes</title>
+	<link rel="stylesheet" href="recipes.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+	<header>
+	    <section>
+		<div>
+		    <img src="images/recipe-book.png">
+		</div>
+		<h1>RecipeBook</h1>
+	    </section>
+	    <label for="seach"></label>
+	    <input type="text" name="search" placeholder="Find a recipe">
+	</header>
+	<hr>
+	<div class="recipeBox">
+	    <img>
+	    <div class="genreTag">dessert</div>
+	    <h1 id="foodName">APPLE CRISP</h1>
+	    <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+	    <span
+		class="rating"
+		role="img"
+		aria-label="Rating: 4 out of 5 stars"
+	    >
+		<span aria-hidden="true" class="icon-star">⭐</span>
+		<span aria-hidden="true" class="icon-star">⭐</span>
+		<span aria-hidden="true" class="icon-star">⭐</span>
+		<span aria-hidden="true" class="icon-star-empty">⭐</span>
+		<span aria-hidden="true" class="icon-star-empty">☆</span>
+	    </span>
+	</div>
+	<footer>
+	    <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+	    <div class="social">
+	<!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+		<a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+		<a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+		<a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+	    </div>
+	</footer>
+    </body>
+</html>

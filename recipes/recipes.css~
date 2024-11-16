@@ -1,0 +1,86 @@
+/* Recipies CSS */
+.edu-au-vic-wa-nt-pre-<uniquifier> {
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    display: block;
+    height: 2.5em;
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+section h1 {
+    font-family: "Edu AU VIC WA NT Pre";
+}
+
+section div {
+    max-width: 5em;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+hr {
+    border: 1px solid;
+}
+
+.recipeBox {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    padding: 1em;
+    margin-top: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+footer {
+    margin-top: 1em;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 7em;
+    border: 2px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+footer:first-child {
+    flex-shrink: 1;
+}
+
+.social {
+    flex-grow: 1;
+    order: -1;
+    object-fit: contain;
+}
+
+.social img {
+    max-height: 2em;
+}
