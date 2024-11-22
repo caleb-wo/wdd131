@@ -64,7 +64,7 @@ const recipes = [
 			'Serve sauce over rice, with the Green beans on the side.'
 		],
 		recipeYield: '3 servings',
-		rating: 4.5
+		rating: 4
 	},
 	{
 		author: 'Shane Thompson',
