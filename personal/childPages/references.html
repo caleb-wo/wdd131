@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caleb Wolfe"/> 
+    <meta name="description" content="A form for interested parties to request the contact information of my past employers."/>
+    <title>References</title>
+    <link rel="stylesheet" href="styles/references.css"/>
+    <link rel="icon" href="images/file.png"/>
+</head>
+<body>
+    <header>
+        <img src="../images/logo_big.png" alt="Logo"/>
+        <div id="heading">
+            <a href="../index.html">Main</a>
+            <a href="references.html">References</a>
+            <a href="onepage.html">One-Page</a>
+        </div>
+    </header>
+    <section id="formGrid">
+        <h1>References</h1>
+        <form id="references">
+            <label for="GragName">Enter Name: <span class="required">*</span></label>
+            <input type="text" id="GrabName" required />
+            <br/>
+            <label for="GrabEmail">Email: <span class="required">*</span></label>
+            <input type="email" id="GrabEmail" required />
+            <br/>
+            <label for=GrabCcompany">Company:</label>
+            <input type="text" id="GrabCompany" placeholder="who do you represent?" />
+            <br/>
+            <label for="GrabDesc">Description:</label>
+            <textarea id="GrabDesc"></textarea>
+            <br/>
+            <button id="formSubmit" type="submit">SUBMIT</button>
+        </form>
+    </section>
+    <footer>
+        <div id="footerLinks">
+            <a href="../index.html">Main</a>
+            <a href="references.html">References</a>
+            <a href="onepage.html">One-Page</a>
+        </div>
+        <img src="../images/logo_big.png" alt="Logo"/>
+    </footer>
+</body>
+<script src="../scripts/formHandler.js" type="module"></script>
+</html>

@@ -1,185 +1,311 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a | */
 /* Roboto Mono; heading */
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 /* Roboto Condensed; body */
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root {
-  /* change the values below to your colors from your palette */
-  --primary-color: #1c6e8c;
-  --secondary-color: #274156;
-  --accent1-color: #605856;
-  --accent2-color: #D0CCD0;
-
-  /* change the values below to your chosen font(s) */
-  --heading-font: "Roboto Mono";
-  --paragraph-font: Roboto Condensed, Helvetica, sans-serif;
-
-  /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: var(
-    --primary-color
-  ); /* headlines on a white background */
-  --headline-color-on-color: white; /* headlines on a colored background */
-  --paragraph-color-on-white: var(
-    --primary-color
-  ); /* paragraph text on a white background */
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */
-  --paragraph-background-color: var(--primary-color);
-  --nav-link-color: var(--primary-color);
-  --nav-background-color: var(--secondary-color);
-  --nav-hover-link-color: white;
-  --nav-hover-background-color: var(--primary-color);
+body { 
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: visible; 
 }
-
-/*  Look around below...but DON'T CHANGE ANYTHING! */
-
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4em;
-  font-size: 18px;
-}
-img {
-  display: block;
-  margin: 0 auto;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
-}
-h2 {
-  text-align: center;
-}
-hr {
-  height: 3px;
-  margin: 35px 0;
-  background: var(--accent1-color);
-}
+/* Header */
 header {
-  padding: 1em;
-  text-align: center;
-  color: var(--paragraph-color-on-color);
-  background-color: var(--paragraph-background-color);
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+    background-color: #1c6e8c;
+    border-radius: 20px;
 }
-header > h1,
-header > h2 {
-  color: var(--headline-color-on-color);
+#heading {
+    display: flex;
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
+    justify-content: space-between;
+    flex-grow: 1;
 }
-
+#heading
+a {
+    color: aquamarine;
+}
+#heading
+a:hover {
+    color: #1c6e8c;
+    background-color: aquamarine;
+}
+#heading:last-child {
+    padding-right: 0.7em;
+}
+/* Radio Buttons */
+form {
+    margin-top: 0.7em;
+    display: flex;
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 600px) { 
+    #heading
+    a {
+        color: aquamarine;
+        font-size: clamp(10px, 15px, 25px);
+    }    
+    header 
+    img {
+        max-height: clamp(20px, 30px, 60px);
+    }
+}
+/*-------------------------------------- PAGE ONE */
+/* ABOUT ME */
+#aboutMe {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.7em;
+    max-width: 800px;
+    margin-top: 1em;
+    margin: 0 auto;
+    padding: 0.5em;
+    background-color: #D0CCD0;
+    border-radius: 10px;
+}
+#aboutMe 
+img {
+    width: clamp(150px, 300px, 400px);
+    border-radius: 10px;
+}
+#aboutMe
+div 
+h1 {
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
+    color: #274156;
+}
+#aboutMe
+div 
 p {
-  font-family: var(--paragraph-font);
-  color: var(--paragraph-color);
-  padding: 1em;
+    font-family: Roboto Condensed, 'Arial Narrow', Arial;
+    color: #274156;
 }
-.colors {
-  width: 100%;
-  min-width: 350px;
-  margin: 30px auto;
-  text-align: center;
+@media screen and (max-width: 600px) {
+    #aboutMe {
+        flex-direction: column;
+    }
+    #aboutMe 
+    img {
+    width: clamp(100px, 200px, 300px);
+    }
+    #aboutMe
+    div 
+    h1 {
+        font-size: 20px;
+    }
+    #aboutMe
+    div 
+    p {
+        font-size: 15px;
+    }  
 }
-.colors th {
-  background-color: #999;
+/* SCROLL MENU */
+#scrolling-menu {
+    overflow-x: auto; 
+    white-space: nowrap; 
+  } 
+#scroll-images-container {
+    margin-top: 1em;
+    display: flex; 
+    flex-direction: row; 
+    gap: 3em;
+  }
+#scroll-images-container
+img {
+    height: 300px;
 }
-.colors td {
-  width: 25%;
-  height: 3em;
+#scrolling-menu::-webkit-scrollbar {
+width: 0; 
 }
-
-.primary {
-  background-color: var(--primary-color);
+#scrolling-menu::-webkit-scrollbar-thumb {
+background-color: #605856;
+border-radius: 10px; 
+transition: transform 0.3s;
 }
-.secondary {
-  background-color: var(--secondary-color);
+#scrolling-menu::-webkit-scrollbar-thumb:hover {
+transform: scale(1.1); 
 }
-.accent1 {
-  background-color: var(--accent1-color);
+@media screen and (max-width: 600px) {
+    #scroll-images-container
+    img {
+        height: 150px;
+    }
 }
-.accent2 {
-  background-color: var(--accent2-color);
+/*-------------------------------------- PAGE TWO */
+#pageTwo {
+    display: none;
 }
-
-p.colored {
-  background-color: var(--paragraph-background-color);
-  color: var(--paragraph-color-on-color);
+#companyName {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
+    background-color: #1c6e8c;
+    color: aquamarine;
+    max-width: 10em;
+    border-radius: 20px;
 }
-
-nav {
-  background-color: var(--accent2-color);
-  line-height: 3em;
-  text-align: center;
-  font-size: 1.2em;
+#selectJob {
+    margin-left: 1em;
+    font-family: Roboto Condensed, 'Arial Narrow', Arial;
 }
-nav {
-  list-style-type: none;
-  display: flex;
+#selectjob
+label {
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
 }
-nav a {
-  padding: 1em;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 10px;
-  color: var(--accent2-color);
+#imgNbullet {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    margin-top: 0;
+    padding: 0.7em;
+    background-color: #D0CCD0;
+    border-radius: 10px;
 }
-nav a:link,
-nav a:visited {
-  color: var(--nav-link-color);
+#imgNbullet
+img {
+    max-height: 20em;
+    border-radius: 10px;
 }
-nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+#job-description
+h1 {
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
+    margin: 0 auto;
+    background-color: #1c6e8c;
+    text-align: center;
+    color: aquamarine;
+    border-radius: 20px;
 }
-
-.sitemap {
-  display: grid;
-  justify-content: center;
-
-  grid-template-columns: repeat(6, 15%);
-  grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas:
-    ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+#job-description
+h2 {
+    margin-left: 5%;
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
 }
-.sitemap > div {
-  text-align: center;
+#job-description
+p {
+    font-family: Roboto Condensed, 'Arial Narrow', Arial;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #D0CCD0;
+    border-radius: 5px;
+    padding: 10px;
 }
-.sm-home {
-  grid-area: home;
-  background-color: #ccc;
-  line-height: 3em;
+@media screen and (max-width: 750px) {
+    #companyName {
+        font-size: 20px;
+    }
+    #jobList {
+        max-width: clamp(50px , 200px, 300px);
+    }
+    #job-description
+    h1 {
+        font-size: 20px;
+    }
+    #imgNbullet {
+        flex-direction: column;
+    }
+    #imgNbullet 
+    img {
+        max-width: clamp(100px, 300px, 400px);
+        margin: 0 auto;
+    }
+    #job-description
+    h2 {
+        font-size: 15px;
+    }
+    #job-description
+    p {
+        text-align: left;
+    }
 }
-.sm-page2 {
-  grid-area: page2;
-  background-color: #ccc;
-  line-height: 3em;
+/*-------------------------------------- PAGE THREE */
+#pageThree {
+    display: none;
 }
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
+#educationGrid {
+    display: grid;
+    grid-template-areas: 
+        "rowOne"
+        "rowTwo"
+        "rowThree";
 }
-
-.top {
-  grid-area: top;
-  border-left: 1px solid;
+.academicContainer {
+    display: flex;
+    flex-direction: column;
 }
-
-.left {
-  grid-area: left;
-  border-top: 1px solid;
-  border-left: 1px solid;
+.academicContainer 
+h2 {
+    color: aquamarine;
+    background-color: #274156;
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
 }
-
-.right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
+.classList {
+    display: flex;
+    flex-direction: column;
+    background-color: #D0CCD0;
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
+    padding: 1em;
+    border-radius: 30px;
+}
+.classList 
+li {
+    font-size: 20px;
+    font-family: Roboto Condensed, 'Arial Narrow', Arial;
+}
+.classList 
+p {
+    font-size: 20px;
+    font-family: Roboto Condensed, 'Arial Narrow', Arial;
+}
+@media screen and (max-width: 600px) {
+    .academicContainer 
+    h2 {
+        font-size: 20px;
+    }
+}
+/* FOOTER */
+footer {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    background-color: #1c6e8c;
+    border-radius: 20px;
+}
+#footerLinks {
+    display: flex;
+    font-family: Roboto Mono, sans-serif, 'Times New Roman' , Times;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+#footerLinks
+a {
+    color: aquamarine;
+}
+#footerLinks
+a:hover {
+    color: #1c6e8c;
+    background-color: aquamarine;
+}
+#footerLinks:first-child {
+    padding-left: 0.7em;
+}
+footer
+img {
+    justify-self: flex-end;
+}
+@media screen and (max-width: 600px) { 
+    #footerLinks
+    a {
+        color: aquamarine;
+        font-size: clamp(10px, 15px, 25px);
+    }    
+    footer 
+    img {
+        max-height: clamp(20px, 30px, 60px);
+    }
 }
